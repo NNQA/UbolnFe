@@ -3,6 +3,7 @@ import Input from "../../components/Input";
 import Button from "../../components/Button";
 import { useFormik } from "formik";
 import { SignupSchema } from "../../utils/schema/schemaLogin";
+import axios from "axios";
 
 interface initialValues {
   email: string;
@@ -16,8 +17,32 @@ const FormLogin = (props: any) => {
       password: "",
     },
     validationSchema: SignupSchema,
-    onSubmit: (values) => {
+    onSubmit: async (values) => {
       console.log(values.email, values.password);
+      await fetch(
+        "https://f148-118-69-65-61.ngrok-free.app/api/v1/auth/signin",
+        {
+          method: "POST",
+          mode: "cors",
+          cache: "no-cache",
+          credentials: "same-origin",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          redirect: "follow",
+          referrerPolicy: "no-referrer",
+          body: JSON.stringify({
+            userName: "QuocAnhCuto",
+            password: "123",
+          }),
+        }
+      )
+        .then(function (response) {
+          return response.json();
+        })
+        .then(function (data) {
+          console.log(data);
+        });
     },
   });
 
@@ -29,7 +54,6 @@ const FormLogin = (props: any) => {
     >
       <div className="text-center mb-5 flex flex-col gap-2">
         <h2>Login your account</h2>
-        {/* <h2>Login your account</h2>✔ */}
         <p className="text-xs font-medium text-opacity-30 text-black">
           It's free and easy
         </p>

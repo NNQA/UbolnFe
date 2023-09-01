@@ -1,6 +1,6 @@
 import Icon from "./components/Icon";
 
-function App() {
+const App = async () => {
   return (
     <section className="flex justify-center gap-2">
       <div className="h-[3rem] w-[3.2rem]  flex justify-center items-center bg-white mt-1  border-solid	border-black border-opacity-20 rounded-lg border-[0.5px] ">
@@ -9,6 +9,6 @@ function App() {
       <h1>asdsd</h1>
     </section>
   );
-}
+};
 
 export default App;
