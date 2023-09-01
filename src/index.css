@@ -1,0 +1,40 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+  --Main-background-color: linear-gradient(139.03deg, rgb(240, 243, 144) 5.05%, rgb(247, 232, 235) 51.71%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+section{
+  background: linear-gradient(to bottom left, #f2f2f2 0%, #ffffff 100%);
+}
+html {
+  font-family: 'Roboto', sans-serif;
+}
+
+img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+@layer base {
+  h1 {
+    @apply text-3xl font-bold;
+  }
+  h2 {
+    @apply text-2xl font-bold tracking-wider;
+  }
+}
+
+/* design section for project in dashboard */
