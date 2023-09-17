@@ -93,11 +93,13 @@ const FormLogin = () => {
             </p>
           </div>
           <Button
-            value={{
+            className="w-full"
+            props={{
               type: "submit",
             }}
-            text="Signin"
-          ></Button>
+          >
+            Signin
+          </Button>
         </div>
       </form>
       <div className=" w-2/3 gap-2 text-fiord-cfg-900 text-opacity-80  mt-2 hidden sm:block">
