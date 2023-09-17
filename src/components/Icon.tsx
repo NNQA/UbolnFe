@@ -1,5 +1,6 @@
 import * as SolidIcons from "@heroicons/react/24/solid";
 import * as OutlineIcons from "@heroicons/react/24/outline";
+import clsx from "clsx";
 export type iconName = keyof typeof SolidIcons | keyof typeof OutlineIcons;
 type HeroIconProps = {
   solid?: false;
@@ -7,10 +8,19 @@ type HeroIconProps = {
   className?: string;
 };
 
-const Icon = ({ solid, iconName, className }: HeroIconProps): JSX.Element => {
+const Icon = ({
+  solid,
+  iconName,
+  className,
+}: HeroIconProps): React.ReactElement => {
+  console.log("asdsd" + iconName + className);
   const Icon = solid ? SolidIcons[iconName] : OutlineIcons[iconName];
 
-  return <Icon className={className}></Icon>;
+  return (
+    <Icon
+      className={clsx("h-[1.6rem] [&>path]:stroke-[1.7]", className)}
+    ></Icon>
+  );
 };
 
 export default Icon;
