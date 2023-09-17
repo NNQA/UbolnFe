@@ -9,8 +9,8 @@ const Input = (props: any) => {
           {props.label}
         </label>
         <input
-          className={`w-full placeholder:text-xs placeholder:font-medium placeholder:pb-2
-          border-solid rounded-[5px] text-sm px-3 pt-[0.3rem] pb-[0.3rem] 
+          className={`w-full sm:placeholder:text-xs placeholder:font-medium sm:placeholder:pb-2 placeholder:text-[10px] placeholder:pb-3
+          border-solid rounded-[5px] text-sm px-3 sm:pt-[0.3rem] sm:pb-[0.3rem] py-[0.2rem] 
           ${
             props.touched && props.error
               ? "border-[#cc3637] border-2"
@@ -22,7 +22,7 @@ const Input = (props: any) => {
           //   className={`${props.touched && props.error ? classes.error : ""}`}
         ></input>
         <div
-          className={`absolute right-4 top-[50%] text-[14px] font-extrabold
+          className={`absolute right-4 top-[50%] text-[14px] font-extrabold hidden sm:block
           ${
             props.error === undefined && props.input.value
               ? "text-[#2ea379]"
@@ -33,7 +33,7 @@ const Input = (props: any) => {
           {props.error === undefined && props.input.value !== "" ? "✔" : ""}
         </div>
         <div
-          className={`absolute right-4 top-[50%] text-[14px] font-extrabold
+          className={`absolute right-4 top-[50%] text-[14px] font-extrabold hidden sm:block
           ${props.touched && props.error ? "text-red-500" : ""}
         `}
         >
