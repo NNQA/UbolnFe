@@ -10,16 +10,18 @@ const Slidebar = (): React.ReactElement => {
     "
     >
       <div className="flex flex-col gap-8 w-full">
-        <p className="w-full flex justify-center font-bold tracking-wider text-[1.2rem]">
-          UBULON BUSINESS
-        </p>
+        <div className="w-full flex justify-end">
+          <p className="flex gap-5 items-start cursor-pointer w-[80%] tetxt-white  py-2 px-2 ">
+            UBULON BUSINESS
+          </p>
+        </div>
       </div>
       <div className="flex flex-col gap-8 w-full">
         {data.map(({ ...fakedata }, idx) => (
           <div key={idx} className="w-full flex justify-end">
             <div
               className="flex  gap-5  items-start cursor-pointer w-[80%] hover:bg-yellow-cfg-300 hover:text-fiord-cfg-400
-            tetxt-white  py-2 px-2 rounded-l-2xl hover:font-bold font-medium"
+            tetxt-white  py-2 px-2 rounded-l-full hover:font-bold font-medium"
             >
               <div className="">
                 <Icon
