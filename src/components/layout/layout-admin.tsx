@@ -7,7 +7,7 @@ type LayoutProps = {
 const LayoutAdmin = ({ children }: LayoutProps): React.ReactElement => {
   return (
     <>
-      <div className="min-h-screen">
+      <div className="min-h-screen flex w-full">
         <Slidebar></Slidebar>
         {children}
       </div>
