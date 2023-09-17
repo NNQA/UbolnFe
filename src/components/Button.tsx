@@ -1,13 +1,26 @@
 import React from "react";
+import clsx from "clsx";
 
-const Button = (props: any) => {
+type buttonProps = {
+  children: React.ReactNode;
+  className?: string;
+  props?: any;
+};
+const Button = ({
+  children,
+  className,
+  props,
+}: buttonProps): React.ReactElement => {
+  console.log(props);
   return (
     <div
-      className="bg-blue-ribbon-400 text-white w-full flex items-center shadow-md shadow-blue-ribbon-500/20
-    rounded-md justify-center pt-[0.4rem] pb-[0.4rem]"
+      className={clsx(
+        "bg-blue-ribbon-400 text-white flex items-center shadow-md shadow-blue-ribbon-500/20 rounded-md justify-center pt-[0.4rem] pb-[0.4rem]",
+        className
+      )}
     >
-      <button {...props.value} className="text-sm font-normal">
-        {props.text}
+      <button {...props} className="text-sm font-normal">
+        {children}
       </button>
     </div>
   );
