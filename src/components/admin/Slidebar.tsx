@@ -24,10 +24,7 @@ const Slidebar = (): React.ReactElement => {
             tetxt-white  py-2 px-2 rounded-l-full hover:font-bold font-medium"
             >
               <div className="">
-                <Icon
-                  iconName={fakedata.iconName}
-                  className="h-[1.6rem] [&>path]:stroke-[1.7]"
-                ></Icon>
+                <Icon iconName={fakedata.iconName} className=""></Icon>
               </div>
               <div className="mt-[0.2px]">
                 <p className="text-[1.2rem]">{fakedata.name}</p>
