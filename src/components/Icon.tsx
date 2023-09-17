@@ -13,7 +13,6 @@ const Icon = ({
   iconName,
   className,
 }: HeroIconProps): React.ReactElement => {
-  console.log("asdsd" + iconName + className);
   const Icon = solid ? SolidIcons[iconName] : OutlineIcons[iconName];
 
   return (
