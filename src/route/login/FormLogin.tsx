@@ -1,16 +1,14 @@
-import React, { useState } from "react";
 import Input from "../../components/Input";
 import Button from "../../components/Button";
 import { useFormik } from "formik";
 import { SignupSchema } from "../../utils/schema/schemaLogin";
-import axios from "axios";
 
 interface initialValues {
   email: string;
   password: string;
 }
 
-const FormLogin = (props: any) => {
+const FormLogin = () => {
   const formik = useFormik<initialValues>({
     initialValues: {
       email: "",
@@ -49,7 +47,7 @@ const FormLogin = (props: any) => {
   console.log(formik.values.email);
   return (
     <div
-      className="w-full h-[80%] flex flex-col  bg-white bg-opacity-40 rounded-lg shadow-md 
+      className="w-full sm:p-2 px-2 py-4 md:w-full flex flex-col  bg-white bg-opacity-40 rounded-lg shadow-md 
        justify-center gap-4 items-center "
     >
       <div className="text-center mb-5 flex flex-col gap-2">
