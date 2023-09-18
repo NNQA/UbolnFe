@@ -29,7 +29,7 @@ const Search = ({ className }: searchProps): React.ReactElement => {
   return (
     <div
       className={clsx(
-        "flex items-center justify-between border-[1px] border-solid rounded-md border-gray-500 px-3 py-1",
+        "flex items-center justify-between border-[2px] border-solid rounded-md border-fiord-cfg-100 px-3 py-1",
         className
       )}
     >

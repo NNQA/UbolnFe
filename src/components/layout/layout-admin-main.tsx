@@ -46,7 +46,7 @@ const LayoutMain = ({ children, title }: quoteInter): React.ReactElement => {
         variants={container}
         initial="hidden"
         animate="visible"
-        className="flex overflow-hidden"
+        className="flex overflow-hidden text-fiord-cfg-400"
       >
         {words?.map((item, idx) => (
           <motion.p variants={child} key={idx}>

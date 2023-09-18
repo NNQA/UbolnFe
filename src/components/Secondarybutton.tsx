@@ -13,7 +13,7 @@ const Secondarybutton = ({
   return (
     <button
       className={clsx(
-        "w-fit border-[1px] border-gray-600 border-solid rounded-md",
+        "w-fit border-[2px] border-fiord-cfg-100 border-solid rounded-md",
         className
       )}
       onClick={onClick}

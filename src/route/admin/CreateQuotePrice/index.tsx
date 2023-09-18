@@ -15,8 +15,8 @@ function QuotePrice() {
 
   return (
     <LayoutMain title="Quote price">
-      <div className="flex flex-col gap-12">
-        <div className="w-full flex justify-end gap-10 items-center">
+      <div className="flex flex-col gap-10">
+        <div className="w-full flex justify-end gap-5 items-center">
           <Secondarybutton className="flex flex-row gap-2 cursor-pointer justify-center items-center px-2 py-1">
             <Icon
               iconName="FunnelIcon"
@@ -31,7 +31,7 @@ function QuotePrice() {
             <div>
               <Icon
                 iconName="TrashIcon"
-                className="text-fiord-cfg-600 h-[13.5px] [&>path]:stroke-[2]"
+                className="text-fiord-cfg-400 h-[13.5px] [&>path]:stroke-[2]"
               ></Icon>
             </div>
             <div className="font-medium text-sm">
