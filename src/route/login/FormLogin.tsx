@@ -1,7 +1,7 @@
 import Input from "../../components/Input";
 import Button from "../../components/Button";
 import { useFormik } from "formik";
-import { SignupSchema } from "../../utils/schema/schemaLogin";
+import { SignupSchema } from "../../lib/utils/schema/schemaLogin.tsx";
 
 interface initialValues {
   email: string;
