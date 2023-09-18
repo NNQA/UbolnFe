@@ -13,10 +13,10 @@ const Slidebar = (): React.ReactElement => {
       <div id="progress-bar" className="bg-black"></div>
       <div className="flex flex-col gap-8 w-full">
         <div className="w-full flex justify-end">
-          <p className="flex gap-5 items-start cursor-pointer w-[80%] tetxt-white py-2 px-2 ">
+          <div className="flex gap-5 items-start cursor-pointer w-[80%] tetxt-white py-2 px-2 ">
             <Svg></Svg>
-            UBULON BUSINESS
-          </p>
+            <p>UBULON BUSINESS</p>
+          </div>
         </div>
       </div>
       <div className="flex flex-col gap-3 w-full">
