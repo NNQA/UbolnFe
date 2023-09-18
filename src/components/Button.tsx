@@ -5,13 +5,14 @@ type buttonProps = {
   children: React.ReactNode;
   className?: string;
   props?: any;
+  onClick?: () => void;
 };
 const Button = ({
   children,
   className,
   props,
+  onClick,
 }: buttonProps): React.ReactElement => {
-  console.log(props);
   return (
     <div
       className={clsx(
@@ -19,7 +20,7 @@ const Button = ({
         className
       )}
     >
-      <button {...props} className="text-sm font-normal">
+      <button {...props} className="text-sm font-normal" onClick={onClick}>
         {children}
       </button>
     </div>
