@@ -23,7 +23,7 @@ const Slidebar = (): React.ReactElement => {
         {data.map(({ ...fakedata }, idx) => (
           <div key={idx} className="w-full flex justify-end">
             <NavLink
-              to={`/admin/${fakedata.name}`}
+              to={`/admin/${fakedata.link}`}
               className={({ isActive, isPending }) =>
                 `${
                   isPending

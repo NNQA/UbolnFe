@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { fakeData } from "../lib/data/fake";
 import CheckBox from "./CheckBox";
 import ReactPaginate from "react-paginate";

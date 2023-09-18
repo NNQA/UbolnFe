@@ -6,7 +6,6 @@ import Button from "../../../components/Button";
 import Search from "../../../components/Search";
 import Modal from "../../../components/Modal";
 import { useState } from "react";
-import { fakeData } from "../../../lib/data/fake";
 
 function QuotePrice() {
   const [show, setShow] = useState<boolean>(false);
