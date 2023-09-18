@@ -8,15 +8,15 @@ export type dataProps = {
 export const data: Readonly<dataProps[]> = [
   {
     name: "Dashboard",
-    iconName: "HomeIcon",
+    iconName: "RectangleGroupIcon",
   },
   {
     name: "QuotePrice",
-    iconName: "CurrencyDollarIcon",
+    iconName: "CurrencyEuroIcon",
   },
   {
     name: "Branch",
-    iconName: "IdentificationIcon",
+    iconName: "CreditCardIcon",
   },
   {
     name: "Category",
