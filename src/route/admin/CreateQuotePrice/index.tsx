@@ -1,31 +1,34 @@
 import LayoutMain from "../../../components/layout/layout-admin-main";
 import Table from "../../../components/table";
 import Icon from "../../../components/Icon";
-import ActionButton from "../../../components/ActionButton";
+import Secondarybutton from "../../../components/Secondarybutton";
 import Button from "../../../components/Button";
 import Search from "../../../components/Search";
+import Modal from "../../../components/Modal";
+import { useState } from "react";
+import { fakeData } from "../../../lib/data/fake";
 
 function QuotePrice() {
+  const [show, setShow] = useState<boolean>(false);
+  const handleShow = () => {
+    setShow(false);
+  };
+
   return (
     <LayoutMain title="Quote price">
       <div className="flex flex-col gap-12">
         <div className="w-full flex justify-end gap-10 items-center">
-          <ActionButton className="flex flex-row gap-2 cursor-pointer justify-center items-center px-2 py-1">
-            <div className="flex flex-row">
-              <Icon
-                iconName="ArrowSmallUpIcon"
-                className="text-fiord-cfg-600 w-3 h-3 aspect-square [&>path]:stroke-[2]"
-              ></Icon>
-              <Icon
-                iconName="ArrowSmallDownIcon"
-                className="text-fiord-cfg-600 w-3 h-3 [&>path]:stroke-[2]"
-              ></Icon>
-            </div>
+          <Secondarybutton className="flex flex-row gap-2 cursor-pointer justify-center items-center px-2 py-1">
+            <Icon
+              iconName="FunnelIcon"
+              className="text-fiord-cfg-400 h-[13.5px] [&>path]:stroke-[2]"
+            ></Icon>
+
             <div className="font-medium text-sm">
-              <p className="text-fiord-cfg-600">Sort</p>
+              <p className="text-fiord-cfg-400">Sort</p>
             </div>
-          </ActionButton>
-          <ActionButton className="flex flex-row gap-2 cursor-pointer justify-center items-center px-2 py-1">
+          </Secondarybutton>
+          <Secondarybutton className="flex flex-row gap-2 cursor-pointer justify-center items-center px-2 py-1">
             <div>
               <Icon
                 iconName="TrashIcon"
@@ -33,9 +36,9 @@ function QuotePrice() {
               ></Icon>
             </div>
             <div className="font-medium text-sm">
-              <p className="text-fiord-cfg-600">Delete</p>
+              <p className="text-fiord-cfg-400">Delete</p>
             </div>
-          </ActionButton>
+          </Secondarybutton>
           <div className="w-[30%]">
             <Search className=""></Search>
           </div>
@@ -45,6 +48,7 @@ function QuotePrice() {
               props={{
                 type: "submit",
               }}
+              onClick={() => setShow(true)}
             >
               <p>Add new quote</p>
             </Button>
@@ -59,6 +63,10 @@ function QuotePrice() {
           </div>
         </div>
         <Table></Table>
+
+        <Modal show={show} onClose={handleShow}>
+          asdawdasd
+        </Modal>
       </div>
     </LayoutMain>
   );
