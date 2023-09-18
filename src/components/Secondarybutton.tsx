@@ -5,7 +5,7 @@ type buttonProps = {
   className?: string;
   onClick?: () => void;
 };
-const ActionButton = ({
+const Secondarybutton = ({
   children,
   className,
   onClick,
@@ -23,4 +23,4 @@ const ActionButton = ({
   );
 };
 
-export default ActionButton;
+export default Secondarybutton;
