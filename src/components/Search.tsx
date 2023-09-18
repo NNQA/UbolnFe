@@ -1,7 +1,7 @@
 import clsx from "clsx";
-import React, { ChangeEvent, useEffect, useState } from "react";
+import React, { ChangeEvent, useEffect, useRef, useState } from "react";
 import Icon from "./Icon";
-import ActionButton from "./ActionButton";
+import Secondarybutton from "./Secondarybutton";
 
 type searchProps = {
   className?: string;
@@ -9,6 +9,8 @@ type searchProps = {
 const Search = ({ className }: searchProps): React.ReactElement => {
   const [check, setCheck] = useState<Boolean>(false);
   const [text, setText] = useState<string>("");
+  const inputRef = useRef<HTMLInputElement>(null);
+
   const handleCheckX = (e: ChangeEvent<HTMLInputElement>) => {
     setText(e.target.value);
     if (text !== "") {
@@ -31,27 +33,31 @@ const Search = ({ className }: searchProps): React.ReactElement => {
         className
       )}
     >
-      <div className=" flex items-center gap-3">
+      <div
+        className=" flex items-center gap-3"
+        onClick={() => inputRef.current?.focus()}
+      >
         <Icon
           iconName="MagnifyingGlassIcon"
-          className="h-[1rem] text-fiord-cfg-600"
+          className="h-[1rem] text-fiord-cfg-400 cursor-pointer [&>path]:stroke-[2]"
         ></Icon>
         <input
           type="text"
           value={text}
           placeholder="Search quote"
-          className="placeholder:text-fiord-cfg-600"
+          className="placeholder:text-fiord-cfg-400 font-semibold"
           onChange={handleCheckX}
+          ref={inputRef}
         />
       </div>
       <div className="">
         {check ? (
-          <ActionButton
+          <Secondarybutton
             className="border-none font-medium cursor-pointer"
             onClick={handleDisableX}
           >
             x
-          </ActionButton>
+          </Secondarybutton>
         ) : (
           ""
         )}
