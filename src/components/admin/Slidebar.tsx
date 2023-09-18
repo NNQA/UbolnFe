@@ -1,35 +1,50 @@
 import React from "react";
 import { data } from "../../lib/data/dataSlidebar";
 import Icon from "../Icon";
+import { NavLink } from "react-router-dom";
+import Svg from "../Svg";
 
 const Slidebar = (): React.ReactElement => {
   return (
     <div
-      className="w-[16%] flex flex-col h-screen gap-12 py-[5rem] border-r-[2px] 
-    rounded-r-lg border-solid border-opacity-60 bg-ebony-clay-500 text-white
-    "
+      className="w-[15%] flex flex-col h-screen gap-10 py-[0.5rem] border-r-[2px] 
+        border-solid border-opacity-60 bg-ebony-clay-500 text-white "
     >
+      <div id="progress-bar" className="bg-black"></div>
       <div className="flex flex-col gap-8 w-full">
         <div className="w-full flex justify-end">
-          <p className="flex gap-5 items-start cursor-pointer w-[80%] tetxt-white  py-2 px-2 ">
+          <p className="flex gap-5 items-start cursor-pointer w-[80%] tetxt-white py-2 px-2 ">
+            <Svg></Svg>
             UBULON BUSINESS
           </p>
         </div>
       </div>
-      <div className="flex flex-col gap-8 w-full">
+      <div className="flex flex-col gap-3 w-full">
         {data.map(({ ...fakedata }, idx) => (
           <div key={idx} className="w-full flex justify-end">
-            <div
-              className="flex  gap-5  items-start cursor-pointer w-[80%] hover:bg-yellow-cfg-300 hover:text-fiord-cfg-400
-            tetxt-white  py-2 px-2 rounded-l-full hover:font-bold font-medium"
+            <NavLink
+              to={`/admin/${fakedata.name}`}
+              className={({ isActive, isPending }) =>
+                `${
+                  isPending
+                    ? ""
+                    : isActive
+                    ? "bg-yellow-cfg-200 text-fiord-cfg-400 font-bold"
+                    : ""
+                } flex  gap-5  items-start cursor-pointer w-[80%] hover:bg-yellow-cfg-200 hover:text-fiord-cfg-400
+                 tetxt-white  py-2 px-2 rounded-l-full hover:font-bold font-medium`
+              }
             >
               <div className="">
-                <Icon iconName={fakedata.iconName} className=""></Icon>
+                <Icon
+                  iconName={fakedata.iconName}
+                  className="h-[1.4rem]"
+                ></Icon>
               </div>
-              <div className="mt-[0.2px]">
-                <p className="text-[1.2rem]">{fakedata.name}</p>
+              <div className="">
+                <p className="text-[1rem] pb-[0.2px]">{fakedata.name}</p>
               </div>
-            </div>
+            </NavLink>
           </div>
         ))}
       </div>
