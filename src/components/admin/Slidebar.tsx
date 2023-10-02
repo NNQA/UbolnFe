@@ -31,8 +31,7 @@ const Slidebar = (): React.ReactElement => {
                     : isActive
                     ? "bg-yellow-cfg-200 text-fiord-cfg-400 font-bold"
                     : ""
-                } flex  gap-5  items-start cursor-pointer w-[80%] hover:bg-yellow-cfg-200 hover:text-fiord-cfg-400
-                 tetxt-white  py-2 px-2 rounded-l-full hover:font-bold font-medium`
+                } `
               }
             >
               <div className="">

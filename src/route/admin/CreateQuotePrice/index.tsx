@@ -6,6 +6,7 @@ import Button from "../../../components/Button";
 import Search from "../../../components/Search";
 import Modal from "../../../components/Modal";
 import { useState } from "react";
+import Cartquote from "../../../components/admin/cart-quote";
 
 function QuotePrice() {
   const [show, setShow] = useState<boolean>(false);
@@ -64,7 +65,7 @@ function QuotePrice() {
         <Table></Table>
 
         <Modal show={show} onClose={handleShow}>
-          asdawdasd
+          <Cartquote onClick={handleShow}></Cartquote>
         </Modal>
       </div>
     </LayoutMain>

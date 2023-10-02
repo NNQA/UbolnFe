@@ -1,11 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import {
-  AnimatePresence,
-  motion,
-  useTransform,
-  useMotionValue,
-} from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
 const BackDrop = (props: any) => {
   return (
@@ -46,7 +41,7 @@ const ModalOverlay = (props: any): React.ReactElement => {
               delay: 0,
             },
           }}
-          className="fixed top-1/2 h-[100px] w-[100px] left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white z-30"
+          className="fixed top-[20%] left-[30%] transform translate-x-1/2 translate-y-1/2 bg-white z-30 h-[50%] w-[40%]"
         >
           <div className="">{props.children}</div>
         </motion.div>
